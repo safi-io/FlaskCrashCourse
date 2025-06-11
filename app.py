@@ -10,8 +10,16 @@ def hello_world():
 
 @app.route('/about')
 def about_page():
-    return render_template('about.html', name="Aleena")
+    return render_template('about.html', name="Aleena") # name is acting as a variable
+
+@app.route('/age')
+def age_page():
+    return "You are 10 years old"
+
+@app.route('/location')
+def location_page():
+    return "Location is changed!"
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) # Because Server does not reload on change
